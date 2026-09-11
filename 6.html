@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .container{
+        width: 900px;
+        overflow: hidden;
+        margin: 30px auto;
+      }
+      .left{
+        width:260px;
+        float:left;
+        padding: 20px;
+      }
+      .right{
+        width: 560px;
+        float: left;
+        padding: 20px;
+
+      }
+      ol{
+        border: 3px dotted red;
+      background-color: aqua;
+    }
+    .strong{
+      border:3px dotted red;
+      background-color: aquamarine;
+    }
+    img{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+    <img src="3.png"/ alt="照片" style="border-radius: 50%;">
+    <h1><font size="6">张逸之</font></h1>
+    <p><font color="grey">数据科学</font></p>
+    <h1>我的爱好</h1>
+    <ol type="1">
+        <li draggable="true">算法&数据结构</li>
+        <li draggable="true">独立游戏开发</li>
+        <li draggable="true">自然语言处理</li>
+        <li draggable="true">摄影与构图</li>
+    </ol>
+    </div>
+    <div class="right">
+     <h2>成绩列表</h2>
+    <p class="strong">
+        数学:<meter value="65" min="0" max="100">65</meter><span id="label" style="min-width:45px;font-weight: bold;">65%</span><br/>
+        C语言:<meter value="80" min="0" max="100">80</meter><span id="label" style="min-width:45px;font-weight: bold;">76%</span><br/>
+    </p>
+    <h3>论文下载</h3>
+    <a href="济南的冬天.docx" target="_blank">论文</a>
+    <div>
+  <input type="password" id="pwdInput" placeholder="请输入密码">
+  <button onclick="showTipWithInput()">显示小贴士</button>
+</div>
+<p id="tip" hidden>💠荔枝虽好，可不要贪吃哦！</p>
+<script>
+function showTipWithInput() {
+  var input = document.getElementById('pwdInput');
+  var password = input.value;
+  var correctPassword = '123456';
+  if (password === correctPassword) {
+    document.getElementById('tip').hidden = false;
+    alert('✅密码正确，小贴士已显示！');
+  } else {
+    alert('❌密码错误，请重试！');
+    input.value = ''; // 清空输入框
+    input.focus();    // 让输入框重新获得焦点
+  }
+}
+</script>
+</div>
+</div>
+</body>
+</html>
